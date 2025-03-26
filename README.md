@@ -1,2 +1,4 @@
-# Maven-repo
-poll scm test * * * * * (to test for 1 min)
+PROJECT TITLE: Automated Web Application Deployment using Jenkins and Tomcat and maven tool
+
+
+Documents related to this project is attached
