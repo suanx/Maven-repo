@@ -1,0 +1,24 @@
+# Step 1: Download Maven
+# Visit https://maven.apache.org/download.cgi and download the tar.gz file.
+
+# Step 2: Extract the Archive
+tar -xvf apache-maven-<version>-bin.tar.gz
+
+# Step 3: Move Maven to /opt
+sudo mv apache-maven-<version> /opt/maven
+
+# Step 4: Set Environment Variables
+vi ~/.bash_profile
+# Add the following lines to the file:
+M2_HOME=/opt/maven
+M2=/opt/maven/bin
+JAVA_HOME=/usr/lib/jvm/java-17-openjdk-17.0.14.0.7-3.el8.x86_64/
+PATH=$PATH:$HOME/bin:$M2_HOME:$M2:$JAVA_HOME
+export PATH
+
+# Step 5: Reload Profile
+source ~/.bash_profile
+
+# Step 6: Verify Installation
+mvn -v
+java -version
